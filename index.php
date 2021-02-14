@@ -19,12 +19,5 @@
 </head>
 <body>
 
-    <div>
-        <h1>The Sugar Daddy</h1>
-    </div>
-    <div>
-        <h2>My Heart Daddies</h2>
-    </div>
-
 </body>
 </html>

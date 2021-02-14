@@ -1,0 +1,374 @@
+{
+  "squadName": "Parrain",
+  "active": true,
+  "members": [
+    {
+      "name": "Florian CHARLAIX",
+      "username": "Ethanell",
+      "number": "001",
+      "age": 19,
+      "sexe": "male",
+      "description": "Il est bo",
+      "type": [
+        "Infocrack",
+        "Thunder Fury"
+      ],
+      "weakness": [
+        "Laisse"
+      ],
+      "pioux": [
+        {
+          "name": "Evan OUSIDHOUM",
+          "username": "SunsetMemory",
+          "number": "2",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Sarah BEN ATIYA",
+          "username": "Incarna_Deokishisu",
+          "number": "3",
+          "sexe": "female",
+          "piou de coeur": true
+        },
+        {
+          "name": "Rémy DAVID",
+          "username": "scorpion6912",
+          "number": "4",
+          "sexe": "male",
+          "piou de coeur": true
+        },
+        {
+          "name": "Juan SANCHEZ GOMEZ",
+          "username": "Cookie",
+          "number": "5",
+          "sexe": "male",
+          "piou de coeur": true
+        }
+      ]
+    },{
+      "name": "Alexis MUGUET",
+      "username": "Hallecsy",
+      "number": "002",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Aeroloustic",
+        "Amour"
+      ],
+      "weakness": [
+        "Claire"
+      ],
+      "pioux": [
+        {
+          "name": "Brandon LE",
+          "username": "BranBran",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Joséphine BARD",
+          "username": "JoJo",
+          "number": "2",
+          "sexe": "female",
+          "piou de coeur": false
+        },
+        {
+          "name": "Bryan RAPARISON",
+          "username": "BryBry",
+          "number": "3",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Carla MUNZER",
+          "username": "CarCar",
+          "number": "4",
+          "sexe": "female",
+          "piou de coeur": false
+        },
+        {
+          "name": "Dorian BEVY",
+          "username": "DoDo",
+          "number": "5",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Thibaut NAJAR",
+          "username": "ThiThi",
+          "number": "6",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Vincent DESCATOIRE",
+          "username": "VinVin",
+          "number": "7",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Lucas BONNIEUL",
+          "username": "LuLu",
+          "number": "8",
+          "sexe": "male",
+          "piou de coeur": true
+
+        },
+        {
+          "name": "Auriane PUSEL",
+          "username": "Tueusedudeser",
+          "number": "9",
+          "sexe": "female",
+          "piou de coeur": true
+        }
+      ]
+    },
+    {
+      "name": "Benoit KEZEL",
+      "username": "Kybo",
+      "number": "003",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Kybobrico",
+        "Pilote"
+      ],
+      "weakness": [
+        "8.6"
+      ],
+      "pioux": [
+        {
+          "name": "Rémy KOPP",
+          "username": "Gomgom",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Sebastien RICHARD",
+          "username": "Carotte Alpha",
+          "number": "2",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Claire FERNANDES",
+          "username": "",
+          "number": "3",
+          "sexe": "female",
+          "piou de coeur": false
+        },
+        {
+          "name": "Joshua LETESSIER",
+          "username": "Faolline",
+          "number": "4",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Lucas BONNIEUL",
+          "username": "LuLu",
+          "number": "5",
+          "sexe": "male",
+          "piou de coeur": true
+        },
+        {
+          "name": "Marie BENEDUCI",
+          "username": "",
+          "number": "6",
+          "sexe": "female",
+          "piou de coeur": true
+        }
+      ]
+    },
+    {
+      "name": "Julien PERBET",
+      "username": "Killouatte",
+      "number": "004",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Dancer",
+        "Hydrateur"
+      ],
+      "weakness": [
+        "Make U Move"
+      ],
+      "pioux": [
+        {
+          "name": "Bartholomé GILLI",
+          "username": "Barthofu",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Enzo CALLEYA",
+          "username": "Flash",
+          "number": "2",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Cyril DESCHAMPS",
+          "username": "Cookie",
+          "number": "4",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Maria TABET",
+          "username": "Incarna_Deokishisu",
+          "number": "5",
+          "sexe": "female",
+          "piou de coeur": false
+        },
+        {
+          "name": "Auriane PUSEL ",
+          "username": "h2o",
+          "number": "6",
+          "sexe": "female",
+          "piou de coeur": false
+
+        },
+        {
+          "name": "Yanis AUMASSON",
+          "username": "Incarna_Deokishisu",
+          "number": "7",
+          "sexe": "male",
+          "piou de coeur": false
+
+        },
+        {
+          "name": "Léna IGLESIS",
+          "username": "Lénaconditions",
+          "number": "8",
+          "sexe": "female",
+          "piou de coeur": false
+
+        },
+        {
+          "name": "Claire FERNANDES",
+          "username": "",
+          "number": "9",
+          "sexe": "female",
+          "piou de coeur": true
+
+        },
+        {
+          "name": "Joséphine BARD",
+          "username": "Caeddis",
+          "number": "10",
+          "sexe": "female",
+          "piou de coeur": true
+        }
+      ]
+    },
+    {
+      "name": "Damien PICARD",
+      "username": "Hastonepy",
+      "number": "005",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Premier de Promo",
+        "Five Entertainment"
+      ],
+      "weakness": [
+        "Crush"
+      ],
+      "pioux": [
+        {
+          "name": "Lazare CHEVERAUX",
+          "username": "Lazare",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Mathis MALEK",
+          "username": "Flash",
+          "number": "2",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Juan SANCHEZ GOMEZ",
+          "username": "Cookie",
+          "number": "4",
+          "sexe": "male",
+          "piou de coeur": true
+        },
+        {
+          "name": "Sarah BEN ATIYA",
+          "username": "Incarna_Deokishisu",
+          "number": "5",
+          "sexe": "female",
+          "piou de coeur": true
+        }
+      ]
+    },
+    {
+      "name": "Alexandre LE GLOUANNEC",
+      "username": "Foukapik",
+      "number": "006",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Fan de Nolta",
+        "Psychologue"
+      ],
+      "weakness": [
+        "Yuu"
+      ],
+      "pioux": [
+        {
+          "name": "Antoine ADJAMIDIS",
+          "username": "Sirco",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        }
+      ]
+    },
+    {
+      "name": "Jérémy DEPLACE",
+      "username": "",
+      "number": "007",
+      "age": 19,
+      "sexe": "male",
+      "type": [
+        "Giga baiseur"
+      ],
+      "weakness": [
+        "Le Sel"
+      ],
+      "pioux": [
+        {
+          "name": "Mohamed GUEFFAF",
+          "username": "Yerow",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Benjamin FAVEROT",
+          "username": "BN_",
+          "number": "2",
+          "sexe": "male",
+          "piou de coeur": false
+        },
+        {
+          "name": "Swann BENZIANE",
+          "username": "",
+          "number": "3",
+          "sexe": "female",
+          "piou de coeur": false
+        }
+      ]
+    }
+  ]
+}
