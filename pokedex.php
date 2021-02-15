@@ -1,15 +1,15 @@
 <?php
-    include "./include/config.php";
+include "./include/config.php";
 
-    $json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
-    $pm = $json["members"][0];
-    if (!empty($_GET)) {
-        foreach ($json["members"] as $member) {
-            if ($member["name"] === $_GET["name"]) {
-                $pm = $member;
-            }
+$json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
+$pm = $json["members"][0];
+if (!empty($_GET)) {
+    foreach ($json["members"] as $member) {
+        if ($member["name"] === $_GET["name"]) {
+            $pm = $member;
         }
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +20,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/gif/jpg" href="https://image.winudf.com/v2/image/bmV0LmFudGFmdW5ueS5wb2tlbW9uZ28uZ3VpZGUuZXhwZXJ0X2ljb25fMTUwNjAyMjk4NF8wOTc/icon.png?w=170&fakeurl=1"/>
+    <link rel="icon" type="image/gif/jpg"
+          href="https://image.winudf.com/v2/image/bmV0LmFudGFmdW5ueS5wb2tlbW9uZ28uZ3VpZGUuZXhwZXJ0X2ljb25fMTUwNjAyMjk4NF8wOTc/icon.png?w=170&fakeurl=1"/>
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
@@ -44,13 +45,14 @@
         <div class="flex column" id="div-info">
             <div class="flex row">
                 <div class="flex column align-items-center w-60">
-                    <div class="ma-1 box-text">
-                        <p><?= "#". $pm["number"] . " " . $pm["name"] ?></p>
+                    <div class="ma-1 justify-content-center">
+                        <p><?= "#" . $pm["number"] . " " . $pm["name"] ?></p>
                     </div>
-                    <img src="assets/images/<?= $idToPic[$pm["number"]] ?>.png" alt="photo" id="picture-pm" class="border">
+                    <img src="assets/images/parrains/<?= $idToPic[$pm["number"]] ?>.png" alt="photo" id="picture-pm"
+                         class="border">
                     <div class="ma-1 flex row">
                         <?php
-                        foreach($pm["type"] as $type) {
+                        foreach ($pm["type"] as $type) {
                             echo '<p class="mx-1 px-1 ' . (isset($typeToColors[$type]) ? $typeToColors[$type] : "black") . '">' . strtoupper($type) . '</p>';
                         }
                         ?>
@@ -65,15 +67,15 @@
                     </div>
                     <br>
                     <div class="ma-1 box-text">
-                        <p><?= $pm["age"] ?>, <?= $pm["sexe"] ?></p>
+                        <p><?= $pm["age"] ?>, <?= $pm["sexe"] ?>, <?= $pm["area"] ?></p>
                     </div>
                     <div class="ma-1 box-title">
                         <h1>Weakness</h1>
                     </div>
                     <div class="mx-2 w-fit">
                         <?php
-                        foreach($pm["weakness"] as $weakness) {
-                        echo '<p class="px-1 ' . (isset($typeToWeakness[$weakness]) ? $typeToWeakness[$weakness] : "black") . '">' . strtoupper($weakness) . '</p>';
+                        foreach ($pm["weakness"] as $weakness) {
+                            echo '<p class="px-1 ' . (isset($typeToWeakness[$weakness]) ? $typeToWeakness[$weakness] : "black") . '">' . strtoupper($weakness) . '</p>';
                         }
                         ?>
                     </div>
@@ -83,14 +85,16 @@
                 <div class="ma-1 box-title">
                     <h1>Pioux</h1>
                 </div>
-                <div class="mx-2">
-                    <p>
+                <div class="flex mx-2">
                         <?php
-                        foreach($pm["pioux"] as $piou) {
-                            echo $piou["name"] . " " . $piou["username"]. "<br>";
+                        if ($pm["pioux"]) {
+                            foreach ($pm["pioux"] as $piou) {
+                                echo '<p class="flex p-card ma-2">' . $piou["fname"] . "<br>" . $piou["sname"] . "<br>" . $piou["username"] . "" . '</p>';
+                            }
+                        } else {
+                            echo "error";
                         }
                         ?>
-                    </p>
                 </div>
                 <div class="ma-1 box-title">
                     <h1>Vieux</h1>
@@ -98,8 +102,12 @@
                 <div class="mx-2">
                     <p>
                         <?php
-                        foreach($pm["vieux"] as $vieu) {
-                            echo $vieu["name"] . " " . $vieu["username"]. "<br>";
+                        if ($pm["vieux"]) {
+                            foreach ($pm["vieux"] as $vieu) {
+                                echo $vieu["name"] . " " . $vieu["username"] . "<br>";
+                            }
+                        } else {
+                            echo "error";
                         }
                         ?>
                     </p>
@@ -121,14 +129,20 @@
                         <form method="GET">
                             <select class="text-white" size="10" multiple name="name">
                                 <?php
-                                    foreach ($json["members"] as $member) {
-                                        echo '<option value="' . $member["name"] . '">' . $member["name"] . '</option>';
+
+                                foreach ($json["members"] as $member) {
+                                    if ($member["active"] === true) {
+                                        echo '<option value="' . $member["name"] . '">' . "#" . $member["number"] . " " . $member["name"] . '</option>';
+                                    } else {
+                                        echo '<option value="' . "???????" . '">' . "#" . $member["number"] . " " . "???????" . '</option>';
                                     }
+                                }
+
                                 ?>
                             </select>
                             <button type="submit">Valider</button>
                         </form>
-                        </div>
+                    </div>
                 </div>
                 <div class="ma-1 box-text">
                     <p>Stats posses</p>

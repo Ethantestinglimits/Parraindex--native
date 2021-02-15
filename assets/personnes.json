@@ -3,12 +3,14 @@
   "active": true,
   "members": [
     {
+      "active": true,
       "name": "Florian CHARLAIX",
       "username": "Ethanell",
       "number": "001",
       "age": 19,
       "sexe": "male",
-      "description": "Il est bo",
+      "area": "Lyon 1",
+      "description": "Patron du service teknik, le grand le fabuleux Lil Pipe, chien de garde à toute épreuve.",
       "type": [
         "Infocrack",
         "Fury"
@@ -18,7 +20,8 @@
       ],
       "pioux": [
         {
-          "name": "Ethan BOURCEREAU",
+          "fname": "Ethan",
+          "sname": "BOURCEREAU",
           "username": "Showz_",
           "number": "1",
           "sexe": "male",
@@ -52,13 +55,24 @@
           "sexe": "male",
           "piou de coeur": true
         }
+      ],
+      "vieux": [
+        {
+          "name": "Nathan DECHER",
+          "username": "Codinget",
+          "number": "1",
+          "sexe": "male",
+          "parrain de coeur": false
+        }
       ]
     },{
+      "active": true,
       "name": "Alexis MUGUET",
       "username": "Hallecsy",
       "number": "002",
       "age": 19,
       "sexe": "male",
+      "description": "Grand gourou des Aeroloustycs, VP du BDE Infonity War.",
       "type": [
         "Aeroloustic",
         "Amour"
@@ -141,11 +155,14 @@
       ]
     },
     {
+      "active": true,
       "name": "Benoit KEZEL",
       "username": "Kybo",
       "number": "003",
       "age": 19,
       "sexe": "male",
+      "area": "Lyon 1",
+      "description": "Pilote chevronné, addict à la sainte 8.6, grand maître de la trotinette, BD/BG en Com & Rézo pour le BDE Infonity War.",
       "type": [
         "Kybobrico",
         "Pilote"
@@ -206,11 +223,14 @@
       ]
     },
     {
+      "active": false,
       "name": "Julien PERBET",
       "username": "Killouatte",
       "number": "004",
       "age": 19,
       "sexe": "male",
+      "area": "Lyon 1",
+      "description": "Chorégraphe en herbe, RP K'Fet & Vice-Trésorier pour le BDE Infonity War.",
       "type": [
         "Dancer",
         "HydratÉ"
@@ -289,11 +309,14 @@
       ]
     },
     {
+      "active": true,
       "name": "Damien PICARD",
       "username": "Hastonepy",
       "number": "005",
       "age": 19,
       "sexe": "male",
+      "area": "Lyon 1",
+      "description": "Grand président du BDE Infonity War, gourou des Pioux Di Five.",
       "type": [
         "Amour",
         "Five"
@@ -304,7 +327,7 @@
       "pioux": [
         {
           "name": "Lazare CHEVERAUX",
-          "username": "Lazare",
+          "username": "titi999",
           "number": "1",
           "sexe": "male",
           "piou de coeur": false
@@ -340,11 +363,14 @@
       ]
     },
     {
+      "active": false,
       "name": "Alexandre LE GLOUANNEC",
       "username": "Foukapik",
       "number": "006",
       "age": 19,
       "sexe": "male",
+      "area": "Lyon 1",
+      "description": "Fan ultime de Nolta, cet homme aka FoukalKpote est un génie incompris.",
       "type": [
         "Amour",
         "Psy"
@@ -363,11 +389,14 @@
       ]
     },
     {
+      "active": false,
       "name": "Jérémy DEPLACE",
       "username": "",
       "number": "007",
       "age": 19,
       "sexe": "male",
+      "area": "Lyon 1",
+      "description": "Giga Baiseur dans l'âme, homme culturé, parrain du magnifique Momow D. L'Arabe.",
       "type": [
         "Game",
         "Giga Baiseur"
