@@ -11,12 +11,19 @@
       "description": "Il est bo",
       "type": [
         "Infocrack",
-        "Thunder Fury"
+        "Fury"
       ],
       "weakness": [
         "Laisse"
       ],
       "pioux": [
+        {
+          "name": "Ethan BOURCEREAU",
+          "username": "Showz_",
+          "number": "1",
+          "sexe": "male",
+          "piou de coeur": false
+        },
         {
           "name": "Evan OUSIDHOUM",
           "username": "SunsetMemory",
@@ -123,6 +130,13 @@
           "number": "9",
           "sexe": "female",
           "piou de coeur": true
+        },
+        {
+          "name": "Ethan BOURCEREAU",
+          "username": "Showz_",
+          "number": "10",
+          "sexe": "male",
+          "piou de coeur": true
         }
       ]
     },
@@ -181,6 +195,13 @@
           "number": "6",
           "sexe": "female",
           "piou de coeur": true
+        },
+        {
+          "name": "Ethan BOURCEREAU",
+          "username": "Showz_",
+          "number": "7",
+          "sexe": "male",
+          "piou de coeur": true
         }
       ]
     },
@@ -192,7 +213,7 @@
       "sexe": "male",
       "type": [
         "Dancer",
-        "Hydrateur"
+        "HydratÉ"
       ],
       "weakness": [
         "Make U Move"
@@ -274,8 +295,8 @@
       "age": 19,
       "sexe": "male",
       "type": [
-        "Premier de Promo",
-        "Five Entertainment"
+        "Amour",
+        "Five"
       ],
       "weakness": [
         "Crush"
@@ -294,6 +315,13 @@
           "number": "2",
           "sexe": "male",
           "piou de coeur": false
+        },
+        {
+          "name": "Ethan BOURCEREAU",
+          "username": "Showz_",
+          "number": "3",
+          "sexe": "male",
+          "piou de coeur": true
         },
         {
           "name": "Juan SANCHEZ GOMEZ",
@@ -318,8 +346,8 @@
       "age": 19,
       "sexe": "male",
       "type": [
-        "Fan de Nolta",
-        "Psychologue"
+        "Amour",
+        "Psy"
       ],
       "weakness": [
         "Yuu"
@@ -341,7 +369,8 @@
       "age": 19,
       "sexe": "male",
       "type": [
-        "Giga baiseur"
+        "Game",
+        "Giga Baiseur"
       ],
       "weakness": [
         "Le Sel"

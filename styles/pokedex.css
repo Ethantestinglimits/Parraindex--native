@@ -3,8 +3,18 @@
 }
 
 p {
-    font-family: VT323;
+    font-family: VT323, monospace;
     font-size: 28px;
+    text-shadow: 2px 2px 0px black;
+}
+h1 {
+    font-family: VT323, monospace;
+    font-size: 34px;
+    text-shadow: 2px 2px 0px black;
+}
+
+main {
+    width: 100%;
 }
 
 .logo {
@@ -60,7 +70,6 @@ p {
     color: white;
 }
 
-
 /* =============================================================================================================  */
 /*                                             MARGES & PADDING                                                   */
 /*  ============================================================================================================= */
@@ -70,6 +79,11 @@ p {
     margin-left: 1rem;
 }
 
+.mx-2 {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
 .my-1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -77,6 +91,11 @@ p {
 
 .ma-1 {
     margin: 1rem;
+}
+
+.px-1 {
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
 }
 
 /* =============================================================================================================  */
@@ -91,6 +110,14 @@ p {
     width: 40%;
 }
 
+.w-auto {
+    width: auto;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
 /* =============================================================================================================  */
 /*                                                PARRAINDEX                                                      */
 /*  ============================================================================================================= */
@@ -101,7 +128,12 @@ p {
     border: 2px solid black;
     border-radius: 25px;
     width: 90%;
-    text-align: center;
+}
+
+.box-title {
+    padding: 15px;
+    width: 90%;
+    background: url("/assets/images/titre.png") no-repeat;
 }
 
 #div-info {
@@ -110,6 +142,7 @@ p {
 
 #div-search-list {
     width: 20%;
+    border-left: 2px solid #00d2ff;
 }
 
 #div-list {

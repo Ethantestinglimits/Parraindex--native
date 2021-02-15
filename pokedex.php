@@ -1,4 +1,6 @@
 <?php
+    include "./include/config.php";
+
     $json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
     $pm = $json["members"][0];
     if (!empty($_GET)) {
@@ -22,7 +24,8 @@
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles/pokedex.css" />
+    <link rel="stylesheet" href="styles/pokedex.css"/>
+    <link rel="stylesheet" href="styles/colors.css"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
@@ -33,9 +36,6 @@
 <body class="bg-purple">
 
 <main>
-    <div class="logo">
-        <img src="https://beta.adalab.es/f-online-pokemon-veronicabautista/static/media/logo.799db9c7.png" height="100%" alt="logo"/>
-    </div>
 
     <!-- Parraindex -->
     <div class="flex row text-white">
@@ -45,45 +45,45 @@
             <div class="flex row">
                 <div class="flex column align-items-center w-60">
                     <div class="ma-1 box-text">
-                        <p><?= $pm["name"] ?></p>
+                        <p><?= "#". $pm["number"] . " " . $pm["name"] ?></p>
                     </div>
-                    <img src="assets/images/flo.png" alt="photo" id="picture-pm">
-                    <div class="ma-1 box-text">
-                        <p>type: <?php
-                            foreach($pm["type"] as $type) {
-                                echo $type . " ";
-                            }
-                            ?>
-                        </p>
+                    <img src="assets/images/<?= $idToPic[$pm["number"]] ?>.png" alt="photo" id="picture-pm" class="border">
+                    <div class="ma-1 flex row">
+                        <?php
+                        foreach($pm["type"] as $type) {
+                            echo '<p class="mx-1 px-1 ' . (isset($typeToColors[$type]) ? $typeToColors[$type] : "black") . '">' . strtoupper($type) . '</p>';
+                        }
+                        ?>
                     </div>
                 </div>
-                <div class="flex column align-items-center justify-content-center w-40">
-                    <div class="ma-1 box-text">
-                        <p>Description</p>
+                <div class="flex column justify-content-center w-40">
+                    <div class="ma-1 box-title">
+                        <h1>Description</h1>
                     </div>
-                    <div>
+                    <div class="mx-2">
                         <p><?= $pm["description"] ?></p>
                     </div>
                     <br>
                     <div class="ma-1 box-text">
                         <p><?= $pm["age"] ?>, <?= $pm["sexe"] ?></p>
                     </div>
-                    <div class="ma-1 box-text">
-                        <p>weakness:
-                            <?php
-                            foreach($pm["weakness"] as $weakness) {
-                                echo $weakness . " ";
-                            }
-                            ?>
-                        </p>
+                    <div class="ma-1 box-title">
+                        <h1>Weakness</h1>
+                    </div>
+                    <div class="mx-2 w-fit">
+                        <?php
+                        foreach($pm["weakness"] as $weakness) {
+                        echo '<p class="px-1 ' . (isset($typeToWeakness[$weakness]) ? $typeToWeakness[$weakness] : "black") . '">' . strtoupper($weakness) . '</p>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="flex column align-items-center">
-                <div class="ma-1 box-text">
-                    <p>Pioux</p>
+            <div class="flex column">
+                <div class="ma-1 box-title">
+                    <h1>Pioux</h1>
                 </div>
-                <div>
+                <div class="mx-2">
                     <p>
                         <?php
                         foreach($pm["pioux"] as $piou) {
@@ -92,10 +92,10 @@
                         ?>
                     </p>
                 </div>
-                <div class="ma-1 box-text">
-                    <p>Vieux</p>
+                <div class="ma-1 box-title">
+                    <h1>Vieux</h1>
                 </div>
-                <div>
+                <div class="mx-2">
                     <p>
                         <?php
                         foreach($pm["vieux"] as $vieu) {
@@ -108,8 +108,8 @@
         </div>
 
         <!-- Partie droite -->
-        <div class="flex column align-items-center justify-content-center border" id="div-search-list">
-            <div class="flex column align-items-center justify-content-center">
+        <div class="flex column justify-content-center align-items-center" id="div-search-list">
+            <div class="flex column justify-content-center align-items-center">
                 <form method="GET">
                     <input type="search" placeholder="Recherche" name="name"/>
                     <button type="submit">Ok</button>

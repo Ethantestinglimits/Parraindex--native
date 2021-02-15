@@ -1,0 +1,34 @@
+.blue {
+    border: 2px solid #5757d6;
+    background: #308bff;
+}
+
+.red {
+    border: 2px solid #ff3b15;
+    background: #ff5847;
+}
+
+.pink {
+    border: 2px solid #ff30aa;
+    background: #ff8bdc;
+}
+
+.cyan {
+    border: 2px solid #00c4ff;
+    background: #99c0ff;
+}
+
+.brown {
+    border: 2px solid #391805;
+    background: #392b23;
+}
+
+.green {
+    border: 2px solid #314807;
+    background: #318314;
+}
+
+.black {
+    border: 2px solid #080808;
+    background: #303030;
+}
