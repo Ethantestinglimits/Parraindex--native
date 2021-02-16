@@ -2,14 +2,49 @@
 include "./include/config.php";
 
 $json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
-$pm = $json["members"][0];
-if (!empty($_GET)) {
-    foreach ($json["members"] as $member) {
-        if ($member["name"] === $_GET["name"]) {
-            $pm = $member;
-        }
+//$pm = $json["members"][0];
+
+
+
+try {
+    $PDO = new PDO("sqlite:./include/database.db");
+    $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $statement = $PDO->prepare("SELECT * FROM pm");
+
+    $statement->execute();
+
+    $pm_list = $statement->fetchAll();
+
+    if (!empty($_GET)) {
+        $statement = $PDO->prepare("SELECT * FROM pm WHERE id = :id");
+
+        $statement->execute(
+            [
+                'id' => $_GET["id"]
+            ]
+        );
+
+        $result = $statement->fetch();
+        $pm = json_decode($result["data"], true);
     }
+    else {
+        $statement = $PDO->prepare("SELECT * FROM pm WHERE id = :id");
+
+        $statement->execute(
+            [
+                'id' => 1
+            ]
+        );
+
+        $result = $statement->fetch();
+        $pm = json_decode($result["data"], true);
+    }
+} catch (Exception $e) {
+    echo 'Exception reçue : ',  $e->getMessage(), "\n";
+    die();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -127,17 +162,15 @@ if (!empty($_GET)) {
                     <br>
                     <div id="div-list">
                         <form method="GET">
-                            <select class="text-white" size="10" multiple name="name">
+                            <select class="text-white" size="10" multiple name="id">
                                 <?php
-
-                                foreach ($json["members"] as $member) {
-                                    if ($member["active"] === true) {
-                                        echo '<option value="' . $member["name"] . '">' . "#" . $member["number"] . " " . $member["name"] . '</option>';
+                                foreach ($pm_list as $member) {
+                                    if (json_decode($member["data"], true)["active"] === true) {
+                                        echo '<option value="' . $member["id"] . '">' . "#" . json_decode($member["data"], true)["number"] . " " . $member["prenom"] . " " . $member["nom"] . '</option>';
                                     } else {
-                                        echo '<option value="' . "???????" . '">' . "#" . $member["number"] . " " . "???????" . '</option>';
+                                        echo '<option value="' . "???????" . '">' . "#" . json_decode($member["data"], true)["number"] . " " . "???????" . '</option>';
                                     }
                                 }
-
                                 ?>
                             </select>
                             <button type="submit">Valider</button>
