@@ -16,6 +16,7 @@ try {
 
     $pm_list = $statement->fetchAll();
 
+
     if (!empty($_GET)) {
         $statement = $PDO->prepare("SELECT * FROM pm WHERE id = :id");
 
