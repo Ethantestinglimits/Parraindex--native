@@ -37,13 +37,13 @@ $weaknessToColors = array(
 );
 
 $idToPic = array(
-  "001" => "florianC",
-  "002" => "alexisM",
-  "003" => "benoitK",
-  "004" => "julienP",
-  "005" => "damienP",
-  "006" => "alexandreL",
-  "007" => "jérémyP",
-  "008" => "",
-  "009" => ""
+  "1" => "florianC",
+  "2" => "alexisM",
+  "3" => "benoitK",
+  "4" => "julienP",
+  "5" => "damienP",
+  "6" => "alexandreL",
+  "7" => "jérémyP",
+  "8" => "",
+  "9" => ""
 );

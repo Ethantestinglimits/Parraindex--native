@@ -18,16 +18,16 @@ try {
 
 
     if (!empty($_GET)) {
+        $id = $_GET["id"];
         $statement = $PDO->prepare("SELECT * FROM pm WHERE id = :id");
 
         $statement->execute(
             [
-                'id' => $_GET["id"]
+                'id' => $id
             ]
         );
 
-        $result = $statement->fetch();
-        $pm = json_decode($result["data"], true);
+        $pm = $statement->fetch();
     }
     else {
         $statement = $PDO->prepare("SELECT * FROM pm WHERE id = :id");
@@ -38,12 +38,21 @@ try {
             ]
         );
 
-        $result = $statement->fetch();
-        $pm = json_decode($result["data"], true);
+        $pm = $statement->fetch();
     }
 } catch (Exception $e) {
     echo 'Exception reçue : ',  $e->getMessage(), "\n";
     die();
+}
+
+if ($pm["birthday"] === null) {
+    $age = "undefined";
+}
+else {
+    $tz = new DateTimeZone('Europe/Brussels');
+    $age = DateTime::createFromFormat('d/m/Y', $pm["birthday"], $tz)
+        ->diff(new DateTime('now', $tz))
+        ->y;
 }
 
 ?>
@@ -82,9 +91,9 @@ try {
             <div class="flex row">
                 <div class="flex column align-items-center w-60">
                     <div class="ma-1 justify-content-center">
-                        <p><?= "#" . $pm["number"] . " " . $pm["name"] ?></p>
+                        <p><?= "#" . $pm["id"] . " " . $pm["prenom"] . " " . $pm["nom"] ?></p>
                     </div>
-                    <img src="assets/images/parrains/<?= $idToPic[$pm["number"]] ?>.png" alt="photo" id="picture-pm"
+                    <img src="assets/images/parrains/<?= $idToPic[$pm["id"]] ?>.png" alt="photo" id="picture-pm"
                          class="border">
                     <div class="ma-1 flex row">
                         <?php
@@ -99,11 +108,13 @@ try {
                         <h1>Description</h1>
                     </div>
                     <div class="mx-2">
-                        <p><?= $pm["description"] ?></p>
+                        <p>
+                            <?= $pm["description"] ?>
+                        </p>
                     </div>
                     <br>
                     <div class="ma-1 box-text">
-                        <p><?= $pm["age"] ?>, <?= $pm["sexe"] ?>, <?= $pm["area"] ?></p>
+                        <p><?= $age ?>, <?= $pm["sexe"] ?>, <?= $pm["area"] ?></p>
                     </div>
                     <div class="ma-1 box-title">
                         <h1>Weakness</h1>
