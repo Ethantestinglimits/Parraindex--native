@@ -137,7 +137,14 @@ else {
                 <div class="flex mx-2">
                         <?php
                         if ($pm["pioux"]) {
-                            foreach ($pm["pioux"] as $piou) {
+                            foreach (preg_split(";", $pm["pioux"]) as $piou_id) {
+
+                                $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :piou_id");
+
+                                $statement->execute();
+
+                                $piou = $statement->fetchAll();
+
                                 echo '<p class="flex p-card ma-2">' . $piou["fname"] . "<br>" . $piou["sname"] . "<br>" . $piou["username"] . "" . '</p>';
                             }
                         } else {
