@@ -79,6 +79,9 @@ else {
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
+    <!-- Icônes importées depuis fontawesome -->
+    <script src="https://kit.fontawesome.com/01082152f6.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="bg-purple">
@@ -95,11 +98,11 @@ else {
                     <div class="ma-1 justify-content-center">
                         <p><?= "#" . $pm["id"] . " " . $pm["prenom"] . " " . $pm["nom"] ?></p>
                     </div>
-                    <img src="assets/images/parrains/<?= $idToPic[$pm["id"]] ?>.png" alt="photo" id="picture-pm"
-                         class="border">
+                    <img src="assets/images/parrains/<?= $pm["id"] ?>.png" alt="photo" id="picture-pm" class="border">
+                    <span class="span"></span>
                     <div class="ma-1 flex row">
                         <?php
-                        foreach ($pm["type"] as $type) {
+                        foreach (explode(";",$pm["type"]) as $type) {
                             echo '<p class="mx-1 px-1 ' . (isset($typeToColors[$type]) ? $typeToColors[$type] : "black") . '">' . strtoupper($type) . '</p>';
                         }
                         ?>
@@ -116,14 +119,14 @@ else {
                     </div>
                     <br>
                     <div class="ma-1 box-text">
-                        <p><?= $age ?>, <?= $pm["sexe"] ?>, <?= $pm["area"] ?></p>
+                        <p><?= $age ?>, <?= $pm["area"] ?></p>
                     </div>
                     <div class="ma-1 box-title">
                         <h1>Weakness</h1>
                     </div>
                     <div class="mx-2 w-fit">
                         <?php
-                        foreach ($pm["weakness"] as $weakness) {
+                        foreach (explode(";",$pm["weakness"]) as $weakness) {
                             echo '<p class="px-1 ' . (isset($typeToWeakness[$weakness]) ? $typeToWeakness[$weakness] : "black") . '">' . strtoupper($weakness) . '</p>';
                         }
                         ?>
@@ -134,39 +137,58 @@ else {
                 <div class="ma-1 box-title">
                     <h1>Pioux</h1>
                 </div>
-                <div class="flex mx-2">
+                <div class="flex flex-w mx-2">
                         <?php
                         if ($pm["pioux"]) {
-                            foreach (preg_split(";", $pm["pioux"]) as $piou_id) {
+                            foreach (explode(";", $pm["pioux"]) as $p_id) {
 
-                                $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :piou_id");
+                                $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :p_id");
 
-                                $statement->execute();
+                                $statement->execute(array(":p_id" => $p_id));
 
-                                $piou = $statement->fetchAll();
+                                $piou = $statement->fetch();
 
-                                echo '<p class="flex p-card ma-2">' . $piou["fname"] . "<br>" . $piou["sname"] . "<br>" . $piou["username"] . "" . '</p>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p>' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
-                            echo "error";
+                            echo '<p>?????</p>';
+                        }
+                        if ($pm["hpioux"]) {
+                            foreach (explode(";", $pm["hpioux"]) as $p_id) {
+
+                                $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :p_id");
+
+                                $statement->execute(array(":p_id" => $p_id));
+
+                                $piou = $statement->fetch();
+
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p>' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
+                            }
+                        } else {
+                            echo '<p>?????</p>';
                         }
                         ?>
                 </div>
                 <div class="ma-1 box-title">
                     <h1>Vieux</h1>
                 </div>
-                <div class="mx-2">
-                    <p>
+                <div class="flex mx-2">
                         <?php
                         if ($pm["vieux"]) {
-                            foreach ($pm["vieux"] as $vieu) {
-                                echo $vieu["name"] . " " . $vieu["username"] . "<br>";
+                            foreach (explode(";", $pm["vieux"]) as $v_id) {
+
+                                $statement = $PDO->prepare("SELECT * FROM vieux WHERE id = :v_id");
+
+                                $statement->execute(array(":v_id" => $v_id));
+
+                                $vieu = $statement->fetch();
+
+                                echo '<p class="flex p-card ma-2">' . $vieu["prenom"] . "<br>" . $vieu["nom"] . "<br>" . $vieu["username"] . "" . '</p>';
                             }
                         } else {
-                            echo "error";
+                            echo '<p>?????</p>';
                         }
                         ?>
-                    </p>
                 </div>
             </div>
         </div>
@@ -174,10 +196,6 @@ else {
         <!-- Partie droite -->
         <div class="flex column justify-content-center align-items-center" id="div-search-list">
             <div class="flex column justify-content-center align-items-center">
-                <form method="GET">
-                    <input type="search" placeholder="Recherche" name="name"/>
-                    <button type="submit">Ok</button>
-                </form>
                 <div class="flex column align-items-center ma-1 box-text">
                     <p>Liste Parrains</p>
                     <br>
@@ -197,6 +215,15 @@ else {
                             <button type="submit">Valider</button>
                         </form>
                     </div>
+                </div>
+                <div class="search-bar">
+                    <form method="GET">
+                        <input type="search" placeholder="Recherche" name="name"/>
+                        <label>
+                            <input type="submit" value="">
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </form>
                 </div>
                 <div class="ma-1 box-text">
                     <p>Stats posses</p>

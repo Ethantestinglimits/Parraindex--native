@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="database [2]">
+<dataSource name="database">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.20">
     <root id="1">
       <ServerVersion>3.34.0</ServerVersion>
@@ -1437,82 +1437,86 @@
       <Position>13</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="518" parent="171" name="pm_id_uindex">
+    <column id="518" parent="171" name="vieux">
+      <Position>14</Position>
+      <DataType>char(254)|0s</DataType>
+    </column>
+    <index id="519" parent="171" name="pm_id_uindex">
       <ColNames>id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="519" parent="171" name="pm_pk">
+    <key id="520" parent="171" name="pm_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pm_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="520" parent="172" name="type">
+    <column id="521" parent="172" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="521" parent="172" name="name">
+    <column id="522" parent="172" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="522" parent="172" name="tbl_name">
+    <column id="523" parent="172" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="523" parent="172" name="rootpage">
+    <column id="524" parent="172" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="524" parent="172" name="sql">
+    <column id="525" parent="172" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="525" parent="173" name="name">
+    <column id="526" parent="173" name="name">
       <Position>1</Position>
     </column>
-    <column id="526" parent="173" name="seq">
+    <column id="527" parent="173" name="seq">
       <Position>2</Position>
     </column>
-    <column id="527" parent="174" name="id">
+    <column id="528" parent="174" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="528" parent="174" name="nom">
+    <column id="529" parent="174" name="nom">
       <Position>2</Position>
       <DataType>char(254)|0s</DataType>
     </column>
-    <column id="529" parent="174" name="prenom">
+    <column id="530" parent="174" name="prenom">
       <Position>3</Position>
       <DataType>char(254)|0s</DataType>
     </column>
-    <column id="530" parent="174" name="birthday">
+    <column id="531" parent="174" name="birthday">
       <Position>4</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="531" parent="174" name="username">
+    <column id="532" parent="174" name="username">
       <Position>5</Position>
       <DataType>char(254)|0s</DataType>
     </column>
-    <column id="532" parent="174" name="type">
+    <column id="533" parent="174" name="type">
       <Position>6</Position>
       <DataType>char(254)|0s</DataType>
     </column>
-    <column id="533" parent="174" name="weakness">
+    <column id="534" parent="174" name="weakness">
       <Position>7</Position>
       <DataType>char(254)|0s</DataType>
     </column>
-    <column id="534" parent="174" name="data">
+    <column id="535" parent="174" name="data">
       <Position>8</Position>
       <DataType>char(1000)|0s</DataType>
     </column>
-    <index id="535" parent="174" name="vieux_id_uindex">
+    <index id="536" parent="174" name="vieux_id_uindex">
       <ColNames>id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="536" parent="174" name="vieux_pk">
+    <key id="537" parent="174" name="vieux_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>vieux_id_uindex</UnderlyingIndexName>
