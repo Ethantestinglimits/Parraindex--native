@@ -98,7 +98,7 @@ else {
                     <div class="ma-1 justify-content-center">
                         <p><?= "#" . $pm["id"] . " " . $pm["prenom"] . " " . $pm["nom"] ?></p>
                     </div>
-                    <img src="assets/images/parrains/<?= $pm["id"] ?>.png" alt="photo" id="picture-pm" class="border">
+                    <img src="assets/images/parrains/<?= $pm["id"] ?>.png" alt="photo" id="picture-pm" class="border sec-2">
                     <span class="span"></span>
                     <div class="ma-1 flex row">
                         <?php
@@ -137,7 +137,7 @@ else {
                 <div class="ma-1 box-title">
                     <h1>Pioux</h1>
                 </div>
-                <div class="flex flex-w mx-2">
+                <div class="flex ovf mx-2">
                         <?php
                         if ($pm["pioux"]) {
                             foreach (explode(";", $pm["pioux"]) as $p_id) {
@@ -148,7 +148,7 @@ else {
 
                                 $piou = $statement->fetch();
 
-                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p>' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';
@@ -162,7 +162,7 @@ else {
 
                                 $piou = $statement->fetch();
 
-                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p>' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-piou" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';
@@ -172,7 +172,7 @@ else {
                 <div class="ma-1 box-title">
                     <h1>Vieux</h1>
                 </div>
-                <div class="flex mx-2">
+                <div class="flex ovf mx-2">
                         <?php
                         if ($pm["vieux"]) {
                             foreach (explode(";", $pm["vieux"]) as $v_id) {
@@ -183,7 +183,7 @@ else {
 
                                 $vieu = $statement->fetch();
 
-                                echo '<p class="flex p-card ma-2">' . $vieu["prenom"] . "<br>" . $vieu["nom"] . "<br>" . $vieu["username"] . "" . '</p>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/vieux/' . $vieu["id"] . '.png" alt="photo" id="picture-vieu" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $vieu["prenom"] . "<br>" . $vieu["nom"] . "<br>" . $vieu["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';

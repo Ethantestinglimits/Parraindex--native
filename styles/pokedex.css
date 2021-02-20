@@ -13,6 +13,10 @@ h1 {
     text-shadow: 2px 2px 0px black;
 }
 
+body {
+    height: 100vh;
+}
+
 main {
     width: 100%;
 }
@@ -54,6 +58,11 @@ main {
     align-items: center;
 }
 
+.ovf {
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
 /* =============================================================================================================  */
 /*                                           COULEURS & BORDERS                                                   */
 /*  ============================================================================================================= */
@@ -76,7 +85,7 @@ main {
 
 .span {
     height: 7px;
-    width: 20vw;
+    width: 250px;
     margin-top: 2.5vh;
     background-color: #2c2f3e;
     border-radius: 50px;
@@ -152,8 +161,13 @@ main {
 }
 
 .sec-1 {
-    min-width: 90px;
-    min-height: 90px;
+    width: 90px!important;
+    height: 90px!important;
+}
+
+.sec-2 {
+    width: 340px!important;
+    height: 340px!important;
 }
 /* =============================================================================================================  */
 /*                                                PARRAINDEX                                                      */
