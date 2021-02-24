@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles/pokedex.css"/>
     <link rel="stylesheet" href="styles/colors.css"/>
-    <link rel="stylesheet" href="styles/menu.scss"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
@@ -24,40 +23,40 @@
     <script src="https://kit.fontawesome.com/01082152f6.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
-    <div>
-        <nav class="menu">
-            <img src="./assets/icons/mstile-150x150.png" class="logo">
+<body class="bg-purple">
 
-            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-            <label class="menu-open-button" for="menu-open">
-                <span class="hamburger hamburger-1"></span>
-                <span class="hamburger hamburger-2"></span>
-                <span class="hamburger hamburger-3"></span>
-            </label>
+<main>
 
-            <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-            <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-            <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-            <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-
+    <div class="flex column text-white">
+        <nav>
+            <img src="assets/icons/android-chrome-192x192.png" id="w-nav">
         </nav>
-        <div>
-            <div>
-
+        <div class="flex column justify-content-center align-items-center">
+            <div class="flex column align-items-center ma-1">
+                <img src="assets/images/interface/pokedex.png">
+                <h1>Parraindex</h1>
             </div>
-            <div>
-                <div>
 
+            <span class="span"></span>
+
+            <div class="flex row justify-content-center align-items-center ma-1">
+                <div class="flex column justify-content-center align-items-center flex-g sec-2">
+                    <img src="assets/images/interface/caninos.png" class="w-60">
+                    <p>?</p>
                 </div>
-                <div>
-
+                <div class="flex column justify-content-center align-items-center flex-g sec-2">
+                    <img src="assets/images/interface/constelation.png" class="w-60">
+                    <p>Généalogie </p>
                 </div>
-                <div>
-
+                <div class="flex column justify-content-center align-items-center flex-g sec-2">
+                    <img src="assets/images/interface/iconeparrain.png" class="w-60">
+                    <p>Owned</p>
                 </div>
             </div>
         </div>
     </div>
+
+</main>
+
 </body>
 </html>

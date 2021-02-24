@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    /border: 1px solid red;
 }
 
 p {
@@ -40,6 +41,10 @@ main {
 
 .flex-w {
     flex-wrap: wrap;
+}
+
+.flex-g {
+    flex-grow: 1;
 }
 
 .row {
@@ -137,6 +142,10 @@ main {
 /*                                                  TAILLES                                                       */
 /*  ============================================================================================================= */
 
+#w-nav {
+    width: 5rem;
+}
+
 .w-20 {
     width: 20%;
 }
@@ -184,7 +193,7 @@ main {
 .box-title {
     padding: 15px;
     width: 90%;
-    background: url("/assets/images/titre.png") no-repeat;
+    background: url("/assets/images/interface/titre.png") no-repeat;
 }
 
 .p-card {
