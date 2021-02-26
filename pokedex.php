@@ -56,8 +56,8 @@ else {
 }
 
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -139,7 +139,7 @@ else {
                 </div>
                 <div class="flex ovf mx-2">
                         <?php
-                        if ($pm["pioux"]) {
+                        if (isset($pm["pioux"])) {
                             foreach (explode(";", $pm["pioux"]) as $p_id) {
 
                                 $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :p_id");
@@ -153,7 +153,7 @@ else {
                         } else {
                             echo '<p>?????</p>';
                         }
-                        if ($pm["hpioux"]) {
+                        if (isset($pm["hpioux"])) {
                             foreach (explode(";", $pm["hpioux"]) as $p_id) {
 
                                 $statement = $PDO->prepare("SELECT * FROM pioux WHERE id = :p_id");
