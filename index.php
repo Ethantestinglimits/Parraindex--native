@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="styles/colors.css"/>
     <link rel="stylesheet" href="styles/menu.scss"/>
 
+    <!-- Hover Effect -->
+    <link rel="stylesheet" href="styles/hover.css"/>
+
     <!-- SCRIPT -->
     <link rel="script" href="script/menu.js"/>
 
@@ -32,28 +35,53 @@
 <main>
 
     <div class="flex column text-white">
-        <nav>
+        <nav class="flex">
             <img src="assets/icons/android-chrome-192x192.png" id="w-nav">
 
+            <ul class="flex">
+                <li><i class="fas fa-home"></i></li>
+                <li><i class="fas fa-address-book"></i></li>
+                <li><i class="fas fa-tree"></i></li>
+                <li><i class="fas fa-user-check"></i></li>
+            </ul>
+
         </nav>
+
+        <div style="display: none">
+            <h1>Login</h1>
+            <form action="" method="post">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </form>
+        </div>
+
         <div class="flex column justify-content-center align-items-center">
-            <div class="flex column align-items-center ma-1 py-1 menu-box">
+            <div class="flex column align-items-center ma-1 py-1 menu-box hvr-grow">
+                <a href="pokedex.php" class="flex column align-items-center text-white">
                 <img src="assets/images/interface/pokedex.png">
                 <h1>Parraindex</h1>
+                </a>
             </div>
 
             <span class="span"></span>
 
             <div class="flex row justify-content-center align-items-center ma-1">
-                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2">
+                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2 hvr-grow">
                     <img src="assets/images/interface/caninos.png" class="w-60">
                     <p>?</p>
                 </div>
-                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2">
+                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2 hvr-grow">
                     <img src="assets/images/interface/constelation.png" class="w-60">
                     <p>Généalogie </p>
                 </div>
-                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2">
+                <div class="flex column justify-content-center align-items-center flex-g menu-box sec-2 hvr-grow">
                     <img src="assets/images/interface/iconeparrain.png" class="w-60">
                     <p>Owned</p>
                 </div>
