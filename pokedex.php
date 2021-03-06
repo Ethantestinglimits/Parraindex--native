@@ -84,9 +84,23 @@ else {
 
 </head>
 
-<body class="bg-purple">
+<body class="bg-purple ma-dex">
 
-<main>
+<main class="">
+
+    <div id="circularMenu" class="circular-menu">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+            <i class="fa fa-plus"></i>
+        </a>
+
+        <menu class="items-wrapper">
+            <a href="index.php" class="menu-item fa fa-home"></a>
+            <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
+            <a href="#" class="menu-item fa fa-tree"></a>
+            <a href="#" class="menu-item fa fa-user"></a>
+        </menu>
+    </div>
 
     <!-- Parraindex -->
     <div class="flex row text-white">
@@ -94,7 +108,7 @@ else {
         <!-- Partie gauche -->
         <div class="flex column" id="div-info">
             <div class="flex row">
-                <div class="flex column align-items-center w-60">
+                <div class="flex column align-items-center w-45">
                     <div class="ma-1 justify-content-center">
                         <p><?= "#" . $pm["id"] . " " . $pm["prenom"] . " " . $pm["nom"] ?></p>
                     </div>
@@ -108,7 +122,7 @@ else {
                         ?>
                     </div>
                 </div>
-                <div class="flex column justify-content-center w-40">
+                <div class="flex column justify-content-center w-55">
                     <div class="ma-1 box-title">
                         <h1>Description</h1>
                     </div>
@@ -119,7 +133,7 @@ else {
                     </div>
                     <br>
                     <div class="ma-1 box-text">
-                        <p><?= $age ?>, <?= $pm["area"] ?></p>
+                        <p><?= $age ?> ans, <?= $pm["area"] ?></p>
                     </div>
                     <div class="ma-1 box-title">
                         <h1>Weakness</h1>
@@ -133,11 +147,11 @@ else {
                     </div>
                 </div>
             </div>
-            <div class="flex column">
+            <div class="flex column ml-3">
                 <div class="ma-1 box-title">
                     <h1>Pioux</h1>
                 </div>
-                <div class="flex ovf mx-2">
+                <div class="flex ovf mx-2" id="style-2">
                         <?php
                         if (isset($pm["pioux"])) {
                             foreach (explode(";", $pm["pioux"]) as $p_id) {
@@ -148,7 +162,7 @@ else {
 
                                 $piou = $statement->fetch();
 
-                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-pioux" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05 no-wrap">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';
@@ -162,7 +176,7 @@ else {
 
                                 $piou = $statement->fetch();
 
-                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-piou" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/pioux/' . $piou["id"] . '.png" alt="photo" id="picture-piou" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05 no-wrap">' . $piou["prenom"] . "<br>" . $piou["nom"] . "<br>" . $piou["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';
@@ -172,7 +186,7 @@ else {
                 <div class="ma-1 box-title">
                     <h1>Vieux</h1>
                 </div>
-                <div class="flex ovf mx-2">
+                <div class="flex ovf mx-2" id="style-2">
                         <?php
                         if ($pm["vieux"]) {
                             foreach (explode(";", $pm["vieux"]) as $v_id) {
@@ -183,7 +197,7 @@ else {
 
                                 $vieu = $statement->fetch();
 
-                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/vieux/' . $vieu["id"] . '.png" alt="photo" id="picture-vieu" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05">' . $vieu["prenom"] . "<br>" . $vieu["nom"] . "<br>" . $vieu["username"] . "" . '</p>' . '</div>';
+                                echo '<div class="flex p-card ma-2">' . '<img src="assets/images/vieux/' . $vieu["id"] . '.png" alt="photo" id="picture-vieu" class="w-20 mr-05 sec-1 border">' .'<p class="mr-05 no-wrap">' . $vieu["prenom"] . "<br>" . $vieu["nom"] . "<br>" . $vieu["username"] . "" . '</p>' . '</div>';
                             }
                         } else {
                             echo '<p>?????</p>';

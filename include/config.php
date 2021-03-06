@@ -1,7 +1,7 @@
 <?php
 
 $typeToColors = array(
-    "Fury" => "blue",
+    "Furry" => "blue",
     "Amour" => "red",
     "Psy" => "pink",
     "Game" => "cyan",

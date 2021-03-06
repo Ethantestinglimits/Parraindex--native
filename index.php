@@ -20,32 +20,40 @@
     <link rel="stylesheet" href="styles/hover.css"/>
 
     <!-- SCRIPT -->
-    <link rel="script" href="script/menu.js"/>
+    <script src="script/menu.js">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <!-- Icônes importées depuis fontawesome -->
-    <script src="https://kit.fontawesome.com/01082152f6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/01082152f6.js" crossOrigin="anonymous"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" class="css">
 
 </head>
 <body class="bg-purple">
 
 <main>
 
+    <nav>
+        <div class="left">
+            <img src="assets/icons/android-chrome-192x192.png" id="w-nav align-items-ss">
+        </div>
+    </nav>
+    <div id="circularMenu" class="circular-menu">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+            <i class="fa fa-plus"></i>
+        </a>
+
+        <menu class="items-wrapper">
+            <a href="index.php" class="menu-item fa fa-home"></a>
+            <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
+            <a href="#" class="menu-item fa fa-tree"></a>
+            <a href="#" class="menu-item fa fa-user"></a>
+        </menu>
+    </div>
     <div class="flex column text-white">
-        <nav class="flex">
-            <img src="assets/icons/android-chrome-192x192.png" id="w-nav">
-
-            <ul class="flex">
-                <li><i class="fas fa-home"></i></li>
-                <li><i class="fas fa-address-book"></i></li>
-                <li><i class="fas fa-tree"></i></li>
-                <li><i class="fas fa-user-check"></i></li>
-            </ul>
-
-        </nav>
 
         <div style="display: none">
             <h1>Login</h1>
@@ -62,7 +70,7 @@
             </form>
         </div>
 
-        <div class="flex column justify-content-center align-items-center">
+        <div class="flex column justify-content-center align-items-center mt-1">
             <div class="flex column align-items-center ma-1 py-1 menu-box hvr-grow">
                 <a href="pokedex.php" class="flex column align-items-center text-white">
                 <img src="assets/images/interface/pokedex.png">
