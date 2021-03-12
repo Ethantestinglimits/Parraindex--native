@@ -58,49 +58,9 @@ else {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-
-    <meta charset="UTF-8">
-    <title>Parraindex</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/gif/jpg"
-          href="https://image.winudf.com/v2/image/bmV0LmFudGFmdW5ueS5wb2tlbW9uZ28uZ3VpZGUuZXhwZXJ0X2ljb25fMTUwNjAyMjk4NF8wOTc/icon.png?w=170&fakeurl=1"/>
-
-    <!-- CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles/pokedex.css"/>
-    <link rel="stylesheet" href="styles/colors.css"/>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
-    <!-- Icônes importées depuis fontawesome -->
-    <script src="https://kit.fontawesome.com/01082152f6.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body class="bg-purple ma-dex">
-
-<main class="">
-
-    <div id="circularMenu" class="circular-menu">
-
-        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
-            <i class="fa fa-plus"></i>
-        </a>
-
-        <menu class="items-wrapper">
-            <a href="index.php" class="menu-item fa fa-home"></a>
-            <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
-            <a href="#" class="menu-item fa fa-tree"></a>
-            <a href="#" class="menu-item fa fa-user"></a>
-        </menu>
-    </div>
+<?php
+include_once 'header.php'
+?>
 
     <!-- Parraindex -->
     <div class="flex row text-white">
@@ -245,5 +205,7 @@ else {
             </div>
         </div>
     </div>
-</main>
-</body>
+
+<?php
+include_once 'footer.php'
+?>
