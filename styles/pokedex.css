@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 * {
     margin: 0;
@@ -286,7 +286,7 @@ main {
 #div-list select {
     width: 100%;
     background: rgba(51,79,124,0.91);
-    font-family: VT323 Arial;
+    font-family: VT323, monospace;
     font-size: 20px;
 }
 
