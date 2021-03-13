@@ -7,13 +7,13 @@ Le Parraidex est une encyclopédie des meilleurs parrains/marraines IUT possible
 **2. Fonctionnalités de l'application :** 
 
 MUST:
-  - Visualiser les parrains sur une interface pokédex
-  - Avoir des informations détaillé sur la parrain/marraine type pokémon.
+  - ~~Visualiser les parrains sur une interface pokédex~~
+  - ~~Avoir des informations détaillé sur la parrain/marraine type pokémon.~~
   - Visualiser mon parraindex
  
 SHOULD:
   - Générer des arbres généalogiques
-  - Création de compte
+  - Création de compte (Num étudiant, filiaire) 
   - Gestion de parraindex
   - Recherche de parrain
   
@@ -27,7 +27,7 @@ COULD:
 | Front | Back | Environnement |
 | ------ | ------ | ------ |
 | HTML5/CSS3| PHP | GitHub|
-| JS | | |
+| JS | SQLite | |
 
 # Possessions
 
