@@ -1,17 +1,4 @@
 <?php
-
-
-class config {
-
-    public static function connect()
-    {
-        $serverName = "";
-        $dbUsername = "";
-        $dbPassword = "";
-        $dbName = "";
-
-    }
-
-
-}
-
+//Connection DB SQLite pour le Login system
+$db = new PDO("sqlite:" . "../database.db");
+?>
