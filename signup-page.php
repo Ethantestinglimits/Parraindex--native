@@ -7,7 +7,7 @@
             <div class="flex column">
                 <form action="signup-inc.php" method="post">
                     <label>
-                        <input type="text" name="name" placeholder="Nom de famille...">
+                        <input type="text" name="firstname" placeholder="Nom de famille...">
                     </label>
                     <label>
                         <input type="text" name="name" placeholder="Prénom...">
@@ -25,7 +25,7 @@
                         <input type="password" name="pwd" placeholder="Mot de passe...">
                     </label>
                     <label>
-                        <input type="text" name="pwdrepeat" placeholder="Mot de passe à nouveau...">
+                        <input id="" type="text" name="pwdrepeat" placeholder="Mot de passe à nouveau...">
                     </label>
                     <label>
                         <button type="submit" name="submit">S'inscrire</button>

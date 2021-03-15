@@ -32,25 +32,28 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" class="css">
 
 </head>
+
 <body class="bg-purple">
 
-<main>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="assets/icons/android-chrome-192x192.png" id="w-nav align-items-ss">
+            </div>
+        </nav>
+        <div id="circularMenu" class="circular-menu">
 
-    <nav>
-        <div class="left">
-            <img src="assets/icons/android-chrome-192x192.png" id="w-nav align-items-ss">
+            <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+                <i class="fa fa-plus"></i>
+            </a>
+
+            <menu class="items-wrapper">
+                <a href="index.php" class="menu-item fa fa-home"></a>
+                <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
+                <a href="#" class="menu-item fa fa-tree"></a>
+                <a href="signup-page.php" class="menu-item fa fa-user"></a>
+            </menu>
         </div>
-    </nav>
-    <div id="circularMenu" class="circular-menu">
+    </header>
 
-        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
-            <i class="fa fa-plus"></i>
-        </a>
-
-        <menu class="items-wrapper">
-            <a href="index.php" class="menu-item fa fa-home"></a>
-            <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
-            <a href="#" class="menu-item fa fa-tree"></a>
-            <a href="signup.php" class="menu-item fa fa-user"></a>
-        </menu>
-    </div>
+    <main>

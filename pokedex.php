@@ -1,13 +1,13 @@
 <?php
 include "./include/config.php";
 
-$json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
+//$json = json_decode(file_get_contents(".\\assets\\personnes.json"), true);
 //$pm = $json["members"][0];
 
 
 
 try {
-    $PDO = new PDO("sqlite:./include/database.db");
+    $PDO = new PDO("sqlite:./databases/database.db");
     $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $statement = $PDO->prepare("SELECT * FROM pm");

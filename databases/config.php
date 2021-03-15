@@ -1,5 +1,9 @@
 <?php
 
+$domain_name = 'parraindex.com';
+$from_email = 'noreply@parraindex.com';
+
+
 $typeToColors = array(
     "Furry" => "blue",
     "Amour" => "red",
