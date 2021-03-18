@@ -377,7 +377,7 @@
     <table id="173" parent="2" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="174" parent="2" name="user"/>
+    <table id="174" parent="2" name="users"/>
     <table id="175" parent="2" name="vieux"/>
     <argument id="176" parent="6">
       <ArgumentDirection>R</ArgumentDirection>

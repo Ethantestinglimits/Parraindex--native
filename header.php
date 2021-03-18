@@ -51,7 +51,7 @@
                 <a href="index.php" class="menu-item fa fa-home"></a>
                 <a href="pokedex.php" class="menu-item fa fa-address-book"></a>
                 <a href="#" class="menu-item fa fa-tree"></a>
-                <a href="signup-page.php" class="menu-item fa fa-user"></a>
+                <a href="signup.php" class="menu-item fa fa-user"></a>
             </menu>
         </div>
     </header>

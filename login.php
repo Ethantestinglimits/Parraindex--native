@@ -1,11 +1,12 @@
 <?php
     include_once 'header.php'
 ?>
+
     <section class="register">
         <div class="segment">
             <h1>Se Connecter</h1>
             <div class="flex column">
-                <form action="login-inc.php" method="post">
+                <form action="include/login-inc.php" method="post">
                     <label for="user1">
                         <input type="text" name="name" placeholder="Pseudo/Email...">
                     </label>

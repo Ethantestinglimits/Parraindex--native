@@ -5,7 +5,7 @@
         <div class="segment">
             <h1>S'inscrire</h1>
             <div class="flex column">
-                <form action="signup-inc.php" method="post">
+                <form action="include/signup-inc.php" method="post">
                     <label>
                         <input type="text" name="firstname" placeholder="Nom de famille...">
                     </label>
@@ -25,11 +25,12 @@
                         <input type="password" name="pwd" placeholder="Mot de passe...">
                     </label>
                     <label>
-                        <input id="" type="text" name="pwdrepeat" placeholder="Mot de passe à nouveau...">
+                        <input id="" type="password" name="pwdrepeat" placeholder="Mot de passe à nouveau...">
                     </label>
                     <label>
                         <button type="submit" name="submit">S'inscrire</button>
                     </label>
+                    <a href="login.php"><p>Déjà incrit ?</p></a>
                 </form>
             </div>
         </div>
